@@ -17,6 +17,7 @@ export class UserService {
   //private userUrl = 'http://localhost:8080/user-portal/user';
   //private userUrl = '/api';
   private userUrl = 'http://localhost:8080/interview/candidates';
+  //private userUrl = '/server/interview/candidates';
 
   public getUsers() {
     return this.http.get<User[]>(this.userUrl);
@@ -30,8 +31,9 @@ export class UserService {
     return this.http.delete(this.userUrl + "/"+ user.id);
   }
 
-  public createUser(user) {
-    return this.http.post<User>(this.userUrl, user);
+  public createUser(candidateResponse) {
+  alert(JSON.stringify(candidateResponse));
+    return this.http.post<User>(this.userUrl, candidateResponse);
   }
 
 }

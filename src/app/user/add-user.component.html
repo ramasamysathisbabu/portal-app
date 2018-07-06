@@ -1,19 +1,60 @@
 <div class="col-md-6">
   <h2 class="text-center">Add User</h2>
 <form>
+
   <div class="form-group">
-    <label for="email">Email address:</label>
-    <input type="email" [(ngModel)]="user.email" placeholder="Email" name="email" class="form-control" id="email">
+    <label for="firstName">Prefix:</label>
+    <input [(ngModel)]="candidateResponse.prefix" placeholder="Prefix" name="prefix" class="form-control" id="prefix">
   </div>
 
   <div class="form-group">
     <label for="firstName">First Name:</label>
-    <input [(ngModel)]="user.firstName" placeholder="First Name" name="firstName" class="form-control" id="firstName">
+    <input [(ngModel)]="candidateResponse.firstName" placeholder="First Name" name="firstName" class="form-control" id="firstName">
+  </div>
+
+  <div class="form-group">
+    <label for="middleName">Middle Name:</label>
+    <input [(ngModel)]="candidateResponse.middleName" placeholder="Middle Name" name="middleName" class="form-control" id="middleName">
   </div>
 
   <div class="form-group">
     <label for="lastName">Last Name:</label>
-    <input [(ngModel)]="user.lastName" placeholder="Last name" name="lastName" class="form-control" id="lastName">
+    <input [(ngModel)]="candidateResponse.lastName" placeholder="Last name" name="lastName" class="form-control" id="lastName">
+  </div>
+
+  <div class="form-group">
+    <label for="phoneNumber">Phone Number:</label>
+    <input [(ngModel)]="candidateResponse.phoneNumber" placeholder="Phone Number" name="phoneNumber" class="form-control" id="phoneNumber">
+  </div>
+
+  <div class="form-group">
+    <label for="email">Email address:</label>
+    <input [(ngModel)]="candidateResponse.emailAddress" placeholder="Email" name="email" class="form-control" id="email">
+  </div>
+
+  <div class="form-group">
+    <label for="roleApplied">Role Applied:</label>
+    <input [(ngModel)]="candidateResponse.roleApplied" placeholder="roleApplied" name="roleApplied" class="form-control" id="roleApplied">
+  </div>
+
+  <div class="form-group">
+    <label for="technicalStack">Technical Stack:</label>
+    <input [(ngModel)]="candidateResponse.technicalStack" placeholder="technicalStack" name="technicalStack" class="form-control" id="technicalStack">
+  </div>
+
+  <div class="form-group">
+    <label for="interviewer">Interviewer:</label>
+    <input [(ngModel)]="candidateResponse.interviewer" placeholder="interviewer" name="interviewer" class="form-control" id="interviewer">
+  </div>
+
+  <div class="form-group">
+    <label for="interviewer">Schedule Date:</label>
+    <input [(ngModel)]="candidateResponse.interviewScheduleDate" placeholder="interviewScheduleDate" name="interviewScheduleDate" class="form-control" id="interviewScheduleDate">
+  </div>
+
+  <div class="form-group">
+    <label for="interviewer">Exp In Years:</label>
+    <input [(ngModel)]="candidateResponse.yearsOfExperience" placeholder="yearsOfExperience" name="yearsOfExperience" class="form-control" id="yearsOfExperience">
   </div>
 
   <button class="btn btn-success" (click)="createUser()">Create</button>
