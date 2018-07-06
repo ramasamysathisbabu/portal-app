@@ -1,0 +1,39 @@
+<div class="col-md-6">
+<h2> User Details</h2>
+
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th>Id</th>
+	<th>Prefix</th>
+    <th>First Name</th>
+    <th>middle Name</th>
+    <th>Last Name</th>
+    <th>PhoneNumber</th>
+    <th>E-mail</th>
+    <th>Role Applied</th>
+    <th>Technical Stack</th>
+    <th>Interviewer</th>
+    <th>Interview Schedule Date</th>
+    <th>Exp in Years</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let candidate of candidateResponse">
+    <td>{{candidate.candidateId}}</td>
+	<td>{{candidate.prefix}}</td>
+    <td>{{candidate.firstName}}</td>
+	<td>{{candidate.middleName}}</td>
+    <td>{{candidate.lastName}}</td>
+	<td>{{candidate.phoneNumber}}</td>
+	<td>{{candidate.emailAddress}}</td>
+	<td>{{candidate.roleApplied}}</td>
+	<td>{{candidate.technicalStack}}</td>
+	<td>{{candidate.interviewer}}</td>
+	<td>{{candidate.interviewScheduleDate}}</td>
+	<td>{{candidate.yearsOfExperience}}</td>
+<!--     <td><button class="btn btn-danger" (click)="deleteUser(user)"> Delete User</button></td> -->
+  </tr>
+  </tbody>
+</table>
+</div>
